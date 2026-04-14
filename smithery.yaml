@@ -1,9 +1,37 @@
-author: MEOK AI Labs
-description: Self Healing Infrastructure MCP Server
-license: MIT
 name: self-healing-infrastructure-mcp
-repository: https://github.com/CSOAI-ORG/self-healing-infrastructure-mcp
-tools:
-- description: See server.py
-  name: tool
+description: By **MEOK AI Labs** | https://meok.ai
 version: 1.0.0
+tools:
+- name: node_health_check
+  description: ''
+  parameters:
+  - name: node_name
+    type: string
+    required: true
+- name: restart_service
+  description: ''
+  parameters:
+  - name: service_name
+    type: string
+    required: true
+  - name: node_name
+    type: string
+    required: true
+- name: cost_report
+  description: ''
+  parameters:
+  - name: nodes
+    type: array
+    required: true
+  - name: cost_per_hour
+    type: number
+    required: true
+- name: auto_remediate
+  description: ''
+  parameters:
+  - name: issue
+    type: string
+    required: true
+  - name: node_name
+    type: string
+    required: true
