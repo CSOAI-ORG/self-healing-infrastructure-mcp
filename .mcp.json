@@ -5,7 +5,7 @@
   "tools": [
     {
       "name": "node_health_check",
-      "description": "",
+      "description": "Check health of infrastructure nodes including CPU, memory, disk, and services.",
       "parameters": {
         "type": "object",
         "properties": {
@@ -20,7 +20,7 @@
     },
     {
       "name": "restart_service",
-      "description": "",
+      "description": "Restart a failed service with automatic rollback on repeated failures.",
       "parameters": {
         "type": "object",
         "properties": {
@@ -39,7 +39,7 @@
     },
     {
       "name": "cost_report",
-      "description": "",
+      "description": "Generate infrastructure cost report with breakdown by service, region, and resource.",
       "parameters": {
         "type": "object",
         "properties": {
@@ -58,7 +58,7 @@
     },
     {
       "name": "auto_remediate",
-      "description": "",
+      "description": "Automatically remediate common infrastructure issues using predefined playbooks.",
       "parameters": {
         "type": "object",
         "properties": {

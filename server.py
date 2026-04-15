@@ -22,6 +22,7 @@ mcp = FastMCP("self-healing-infrastructure", instructions="MEOK AI Labs MCP Serv
 
 @mcp.tool()
 def node_health_check(node_name: str, api_key: str = "") -> str:
+    """Check health of infrastructure nodes including CPU, memory, disk, and services."""
     # Simulated health check
     allowed, msg, tier = check_access(api_key)
     if not allowed:
@@ -34,6 +35,7 @@ def node_health_check(node_name: str, api_key: str = "") -> str:
 
 @mcp.tool()
 def restart_service(service_name: str, node_name: str, api_key: str = "") -> str:
+    """Restart a failed service with automatic rollback on repeated failures."""
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
@@ -44,6 +46,7 @@ def restart_service(service_name: str, node_name: str, api_key: str = "") -> str
 
 @mcp.tool()
 def cost_report(nodes: list, cost_per_hour: float, api_key: str = "") -> str:
+    """Generate infrastructure cost report with breakdown by service, region, and resource."""
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
@@ -55,6 +58,7 @@ def cost_report(nodes: list, cost_per_hour: float, api_key: str = "") -> str:
 
 @mcp.tool()
 def auto_remediate(issue: str, node_name: str, api_key: str = "") -> str:
+    """Automatically remediate common infrastructure issues using predefined playbooks."""
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}

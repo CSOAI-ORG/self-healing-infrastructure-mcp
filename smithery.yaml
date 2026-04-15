@@ -3,13 +3,14 @@ description: MEOK AI Labs MCP Server
 version: 1.0.0
 tools:
 - name: node_health_check
-  description: ''
+  description: Check health of infrastructure nodes including CPU, memory, disk, and
+    services.
   parameters:
   - name: node_name
     type: string
     required: true
 - name: restart_service
-  description: ''
+  description: Restart a failed service with automatic rollback on repeated failures.
   parameters:
   - name: service_name
     type: string
@@ -18,7 +19,8 @@ tools:
     type: string
     required: true
 - name: cost_report
-  description: ''
+  description: Generate infrastructure cost report with breakdown by service, region,
+    and resource.
   parameters:
   - name: nodes
     type: array
@@ -27,7 +29,8 @@ tools:
     type: number
     required: true
 - name: auto_remediate
-  description: ''
+  description: Automatically remediate common infrastructure issues using predefined
+    playbooks.
   parameters:
   - name: issue
     type: string
