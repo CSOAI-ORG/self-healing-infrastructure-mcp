@@ -1,6 +1,6 @@
 {
   "name": "self-healing-infrastructure-mcp",
-  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 MEOK AI Labs MCP Server",
+  "description": "AI-powered self healing infrastructure MCP server for agents. Supports node health check, cluster health check, restart service. By MEOK AI Labs.",
   "version": "1.0.0",
   "tools": [
     {

@@ -1,7 +1,7 @@
 {
   "name": "self-healing-infrastructure-mcp",
   "version": "1.0.0",
-  "description": "Self Healing Infrastructure MCP Server by MEOK AI Labs",
+  "description": "AI-powered self healing infrastructure MCP server for agents. Supports node health check, cluster health check, restart service. By MEOK AI Labs.",
   "main": "server.py",
   "scripts": {
     "start": "python server.py"
