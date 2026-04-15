@@ -1,0 +1,66 @@
+{
+  "name": "self-healing-infrastructure",
+  "description": "MEOK AI Labs \u2014 Self-Healing Infrastructure. 9-node cluster health, GPU orchestration, cost optimization, auto-remediation.",
+  "version": "1.0.0",
+  "protocol_version": "2025-11-25",
+  "publisher": {
+    "name": "MEOK AI Labs",
+    "url": "https://meok.ai",
+    "email": "nicholas@meok.ai"
+  },
+  "repository": "https://github.com/CSOAI-ORG/self-healing-infrastructure-mcp",
+  "license": "MIT",
+  "transport": [
+    "stdio",
+    "streamable-http"
+  ],
+  "authentication": {
+    "type": "api-key",
+    "free_tier": true,
+    "free_limit": "15 calls/day"
+  },
+  "tools": [
+    {
+      "name": "node_health_check",
+      "description": "Check health of infrastructure nodes including CPU, memory, disk, and GPU."
+    },
+    {
+      "name": "cluster_health_check",
+      "description": "Check health of all 9 nodes in the cluster."
+    },
+    {
+      "name": "restart_service",
+      "description": "Restart a failed service with automatic rollback on repeated failures."
+    },
+    {
+      "name": "cost_report",
+      "description": "Generate infrastructure cost report with breakdown by service, region, and resource."
+    },
+    {
+      "name": "auto_remediate",
+      "description": "Automatically remediate common infrastructure issues using predefined playbooks."
+    },
+    {
+      "name": "gpu_orchestration",
+      "description": "Orchestrate GPU allocation across the 9-node cluster."
+    },
+    {
+      "name": "failover_decision",
+      "description": "Determine failover action for a failed node in the cluster."
+    }
+  ],
+  "categories": [
+    "AI & Machine Learning",
+    "Agent Infrastructure",
+    "Content & Media"
+  ],
+  "pricing": {
+    "free": {
+      "calls_per_day": 15
+    },
+    "pro": {
+      "price": "$29/month",
+      "url": "https://meok.ai/pricing"
+    }
+  }
+}
