@@ -1,39 +1,38 @@
-# Self-Healing Infrastructure MCP Server
+<div align="center">
 
-> **By [MEOK AI Labs](https://meok.ai)** — Sovereign AI tools for everyone.
+[![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/self-healing-infrastructure-mcp)](https://github.com/CSOAI-ORG/self-healing-infrastructure-mcp/stargazers)
 
-9-node cluster auto-recovery, GPU orchestration, cost optimization, and auto-remediation for AI infrastructure.
+# uselfU healingU infrastructureU mcp
 
-## Tools
+**9-node cluster auto-recovery, GPU orchestration, cost optimization, and auto-remediation for AI infrastructure.**
 
-| Tool | Description |
-|------|-------------|
-| `node_health_check` | Check individual node health (CPU, memory, disk, GPU) |
-| `cluster_health_check` | Check all 9 nodes in the cluster |
-| `restart_service` | Restart service with max retry logic |
-| `cost_report` | Generate infrastructure cost report |
-| `auto_remediate` | Auto-remediate common issues (high CPU, OOM, disk full) |
-| `gpu_orchestration` | Orchestrate GPU allocation across cluster |
-| `failover_decision` | Determine failover action for failed nodes |
+[![npm version](https://img.shields.io/npm/v/@meok-ai/self-healing-infrastructure-mcp)](https://www.npmjs.com/package/@meok-ai/self-healing-infrastructure-mcp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
 
-## Quick Start
+[Installation](#installation) · [Docs](https://csoai.org) · [Report Bug](https://github.com/CSOAI-ORG/self-healing-infrastructure-mcp/issues)
 
-```bash
-pip install mcp
-python server.py
-```
-
-## Architecture
-
-- **9-node cluster** — Standard GPU cluster configuration
-- **GPU orchestration** — 4 GPUs per node (36 total)
-- **Auto-remediation** — Predefined playbooks for common failures
-- **Cost optimization** — Idle node detection, spot instance recommendations
-
-## Part of MEOK AI Labs
-
-One of 250+ MCP servers. Browse all at [meok.ai](https://meok.ai)
+</div>
 
 ---
 
-**MEOK AI Labs** | [meok.ai](https://meok.ai) | nicholas@meok.ai
+## Installation
+
+```bash
+pip install self-healing-infrastructure-mcp
+# or
+npm install -g @meok-ai/self-healing-infrastructure-mcp
+```
+
+## Quick Start
+
+See the project repository for full documentation and examples.
+
+## Enterprise Support
+
+- 📧 nicholas@csoai.org
+- 🌐 [CSOAI.org](https://csoai.org)
+
+## License
+
+MIT © [CSOAI](https://csoai.org)
