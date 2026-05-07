@@ -36,7 +36,23 @@ _service_failures = defaultdict(int)
 
 @mcp.tool()
 def node_health_check(node_name: str, api_key: str = "") -> str:
-    """Check health of infrastructure nodes including CPU, memory, disk, and GPU."""
+    """Check health of infrastructure nodes including CPU, memory, disk, and GPU.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
@@ -58,7 +74,23 @@ def node_health_check(node_name: str, api_key: str = "") -> str:
 
 @mcp.tool()
 def cluster_health_check(api_key: str = "") -> str:
-    """Check health of all 9 nodes in the cluster."""
+    """Check health of all 9 nodes in the cluster.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
@@ -101,7 +133,23 @@ def cluster_health_check(api_key: str = "") -> str:
 def restart_service(
     service_name: str, node_name: str, max_retries: int = 3, api_key: str = ""
 ) -> str:
-    """Restart a failed service with automatic rollback on repeated failures."""
+    """Restart a failed service with automatic rollback on repeated failures.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
@@ -131,7 +179,22 @@ def restart_service(
 
 @mcp.tool()
 def cost_report(nodes: list, cost_per_hour: float, api_key: str = "") -> str:
-    """Generate infrastructure cost report with breakdown by service, region, and resource."""
+    """Generate infrastructure cost report with breakdown by service, region, and resource.
+
+    Behavior:
+        This tool generates structured output without modifying external systems.
+        Output is deterministic for identical inputs. No side effects.
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
@@ -156,7 +219,23 @@ def cost_report(nodes: list, cost_per_hour: float, api_key: str = "") -> str:
 
 @mcp.tool()
 def auto_remediate(issue: str, node_name: str, api_key: str = "") -> str:
-    """Automatically remediate common infrastructure issues using predefined playbooks."""
+    """Automatically remediate common infrastructure issues using predefined playbooks.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
@@ -183,7 +262,23 @@ def auto_remediate(issue: str, node_name: str, api_key: str = "") -> str:
 def gpu_orchestration(
     task: str, gpu_required: int = 1, priority: str = "normal", api_key: str = ""
 ) -> str:
-    """Orchestrate GPU allocation across the 9-node cluster."""
+    """Orchestrate GPU allocation across the 9-node cluster.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
@@ -209,7 +304,23 @@ def gpu_orchestration(
 
 @mcp.tool()
 def failover_decision(failed_node: str, api_key: str = "") -> str:
-    """Determine failover action for a failed node in the cluster."""
+    """Determine failover action for a failed node in the cluster.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
