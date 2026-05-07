@@ -52,6 +52,11 @@ def node_health_check(node_name: str, api_key: str = "") -> str:
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        node_name (str): The node name to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -104,6 +109,10 @@ def cluster_health_check(api_key: str = "") -> str:
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -177,6 +186,13 @@ def restart_service(
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        service_name (str): The service name to analyze or process.
+        node_name (str): The node name to analyze or process.
+        max_retries (int): The max retries to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -236,6 +252,12 @@ def cost_report(nodes: list, cost_per_hour: float, api_key: str = "") -> str:
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        nodes (list): The nodes to analyze or process.
+        cost_per_hour (float): The cost per hour to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -291,6 +313,12 @@ def auto_remediate(issue: str, node_name: str, api_key: str = "") -> str:
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        issue (str): The issue to analyze or process.
+        node_name (str): The node name to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -348,6 +376,13 @@ def gpu_orchestration(
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        task (str): The task to analyze or process.
+        gpu_required (int): The gpu required to analyze or process.
+        priority (str): The priority to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -404,6 +439,11 @@ def failover_decision(failed_node: str, api_key: str = "") -> str:
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        failed_node (str): The failed node to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
