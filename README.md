@@ -1,45 +1,61 @@
-[![self-healing-infrastructure-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/self-healing-infrastructure-mcp/badges/score.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/self-healing-infrastructure-mcp)
-[![MCP Registry](https://img.shields.io/badge/MCP_Registry-Published-green)](https://registry.modelcontextprotocol.io)
-[![PyPI](https://img.shields.io/pypi/v/self-healing-infrastructure-mcp)](https://pypi.org/project/self-healing-infrastructure-mcp/)
-
-[![self-healing-infrastructure-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/self-healing-infrastructure-mcp/badges/card.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/self-healing-infrastructure-mcp)
-
 <div align="center">
 
-[![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/self-healing-infrastructure-mcp)](https://github.com/CSOAI-ORG/self-healing-infrastructure-mcp/stargazers)
+# Self Healing Infrastructure MCP
 
-# uselfU healingU infrastructureU mcp
+**MCP server for self healing infrastructure mcp operations**
 
-**9-node cluster auto-recovery, GPU orchestration, cost optimization, and auto-remediation for AI infrastructure.**
-
-[![npm version](https://img.shields.io/npm/v/@meok-ai/self-healing-infrastructure-mcp)](https://www.npmjs.com/package/@meok-ai/self-healing-infrastructure-mcp)
+[![PyPI](https://img.shields.io/pypi/v/meok-self-healing-infrastructure-mcp)](https://pypi.org/project/meok-self-healing-infrastructure-mcp/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
-
-[Installation](#installation) · [Docs](https://csoai.org) · [Report Bug](https://github.com/CSOAI-ORG/self-healing-infrastructure-mcp/issues)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-MCP_Server-purple)](https://meok.ai)
 
 </div>
 
----
+## Overview
+
+Self Healing Infrastructure MCP provides AI-powered tools via the Model Context Protocol (MCP).
+
+## Tools
+
+| Tool | Description |
+|------|-------------|
+| `node_health_check` | Check health of infrastructure nodes including CPU, memory, disk, and GPU. |
+| `cluster_health_check` | Check health of all 9 nodes in the cluster. |
+| `restart_service` | Restart a failed service with automatic rollback on repeated failures. |
+| `cost_report` | Generate infrastructure cost report with breakdown by service, region, and resou |
+| `auto_remediate` | Automatically remediate common infrastructure issues using predefined playbooks. |
+| `gpu_orchestration` | Orchestrate GPU allocation across the 9-node cluster. |
+| `failover_decision` | Determine failover action for a failed node in the cluster. |
 
 ## Installation
 
 ```bash
-pip install self-healing-infrastructure-mcp
-# or
-npm install -g @meok-ai/self-healing-infrastructure-mcp
+pip install meok-self-healing-infrastructure-mcp
 ```
 
-## Quick Start
+## Usage with Claude Desktop
 
-See the project repository for full documentation and examples.
+Add to your Claude Desktop MCP config (`claude_desktop_config.json`):
 
-## Enterprise Support
+```json
+{
+  "mcpServers": {
+    "self-healing-infrastructure-mcp": {
+      "command": "python",
+      "args": ["-m", "meok_self_healing_infrastructure_mcp.server"]
+    }
+  }
+}
+```
 
-- 📧 nicholas@csoai.org
-- 🌐 [CSOAI.org](https://csoai.org)
+## Usage with FastMCP
+
+```python
+from mcp.server.fastmcp import FastMCP
+
+# This server exposes 7 tool(s) via MCP
+# See server.py for full implementation
+```
 
 ## License
 
-MIT © [CSOAI](https://csoai.org)
-<!-- mcp-name: io.github.CSOAI-ORG/self-healing-infrastructure-mcp -->
+MIT © [MEOK AI Labs](https://meok.ai)
