@@ -1,3 +1,4 @@
+<!-- mcp-name: CSOAI-ORG/self-healing-infrastructure-mcp -->
 # Self Healing Infrastructure MCP
 
 [![MEOK AI Labs](https://img.shields.io/badge/MEOK-AI%20Labs-667eea)](https://meok.ai)
