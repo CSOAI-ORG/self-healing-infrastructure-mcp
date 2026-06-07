@@ -1,0 +1,25 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "self-healing-infrastructure-mcp",
+    "description": "Self Healing Infrastructure MCP Server by MEOK AI Labs",
+    "version": "1.0.6",
+    "provider": "MEOK AI Labs",
+    "interfaces": [
+      {
+        "type": "mcp",
+        "transport": "stdio",
+        "package": "self-healing-infrastructure-mcp"
+      }
+    ],
+    "capabilities": [
+      "node_health_check",
+      "cluster_health_check",
+      "restart_service",
+      "cost_report",
+      "auto_remediate",
+      "gpu_orchestration",
+      "failover_decision"
+    ]
+  }
+}
