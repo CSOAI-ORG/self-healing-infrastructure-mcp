@@ -1,34 +1,42 @@
-# Self Healing Infrastructure MCP
-
-> Self-healing infrastructure MCP — anomaly detection, auto-remediation, rollback, health checks
-
-`self-healing-infrastructure-mcp` is a Model Context Protocol (MCP) server by MEOK AI Labs.
+# self-healing-infrastructure-mcp
+# **MCP server for self healing infrastructure mcp operations**
 
 ## Install
-
 ```bash
 pip install self-healing-infrastructure-mcp
 ```
 
-Or run without installing:
-
-```bash
-uvx self-healing-infrastructure-mcp
-```
+## Auth & Rate Limits
+- Free tier: 10 calls/day. No API key required.
+- Pro tier (£79/mo): unlimited + signed attestations.
+- Enterprise (£1,499/mo): white-label.
 
 ## Tools
 
-- `node_health_check` — Check health of infrastructure nodes including CPU, memory, disk, and GPU.
-- `cluster_health_check` — Check health of all 9 nodes in the cluster.
-- `restart_service` — Restart a failed service with automatic rollback on repeated failures.
-- `cost_report` — Generate infrastructure cost report with breakdown by service, region, and resource.
-- `auto_remediate` — Automatically remediate common infrastructure issues using predefined playbooks.
-- `gpu_orchestration` — Orchestrate GPU allocation across the 9-node cluster.
-- `failover_decision` — Determine failover action for a failed node in the cluster.
+### `node_health_check`
+Check health of infrastructure nodes including CPU, memory, disk, and GPU.
 
-## Links
+### `cluster_health_check`
+Check health of all 9 nodes in the cluster.
 
-- Source: https://github.com/CSOAI-ORG/self-healing-infrastructure-mcp
-- PyPI: https://pypi.org/project/self-healing-infrastructure-mcp/
-- MEOK AI Labs: https://meok.ai
-- Council of AI: https://councilof.ai
+### `restart_service`
+Restart a failed service with automatic rollback on repeated failures.
+
+### `cost_report`
+Generate infrastructure cost report with breakdown by service, region, and resource.
+
+### `auto_remediate`
+Automatically remediate common infrastructure issues using predefined playbooks.
+
+### `gpu_orchestration`
+Orchestrate GPU allocation across the 9-node cluster.
+
+### `failover_decision`
+Determine failover action for a failed node in the cluster.
+
+
+## Maintainer
+MEOK AI Labs · hello@meok.ai · https://meok.ai · MIT licensed
+
+## Pairs with
+Governance moat: pair this tool with any of MEOK's 38 governance MCPs (EU AI Act, DORA, NIS2, CRA, GDPR, ISO 42001, etc.) for full compliance coverage.

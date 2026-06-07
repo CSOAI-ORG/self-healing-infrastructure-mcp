@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Self-Healing Infrastructure MCP — MEOK AI Labs. 9-node auto-recovery, GPU orchestration, cost optimization."""
+"""
+Self-Healing Infrastructure MCP — MEOK AI Labs. 9-node auto-recovery, GPU orchestration, cost optimization."""
 
 import sys, os
 
-sys.path.insert(0, os.path.expanduser("~/clawd/meok-labs-engine/shared"))
 from auth_middleware import check_access
 
 import json, subprocess, os
@@ -74,7 +74,7 @@ def node_health_check(node_name: str, api_key: str = "") -> str:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
     if err := _rl():
         return err
 
@@ -130,7 +130,7 @@ def cluster_health_check(api_key: str = "") -> str:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
     if err := _rl():
         return err
 
@@ -210,7 +210,7 @@ def restart_service(
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
     if err := _rl():
         return err
 
@@ -275,7 +275,7 @@ def cost_report(nodes: list, cost_per_hour: float, api_key: str = "") -> str:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
     if err := _rl():
         return err
 
@@ -336,7 +336,7 @@ def auto_remediate(issue: str, node_name: str, api_key: str = "") -> str:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
     if err := _rl():
         return err
 
@@ -400,7 +400,7 @@ def gpu_orchestration(
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
     if err := _rl():
         return err
 
@@ -461,7 +461,7 @@ def failover_decision(failed_node: str, api_key: str = "") -> str:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
     if err := _rl():
         return err
 
@@ -486,5 +486,8 @@ def failover_decision(failed_node: str, api_key: str = "") -> str:
     }
 
 
-if __name__ == "__main__":
+def main():
     mcp.run()
+
+if __name__ == '__main__':
+    main()

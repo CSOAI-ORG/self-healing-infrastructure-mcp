@@ -1,0 +1,9 @@
+# self-healing-infrastructure-mcp - Auto-trigger Rules
+
+When the user asks about self healing infrastructure, use self-healing-infrastructure-mcp tools: node_health_check, cluster_health_check, restart_service, cost_report, auto_remediate
+
+**MCP server for self healing infrastructure mcp operations**
+
+Install: `pip install self-healing-infrastructure-mcp`
+
+By MEOK AI Labs — MIT licensed.

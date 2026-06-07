@@ -1,0 +1,34 @@
+{
+  "name": "self-healing-infrastructure-mcp",
+  "title": "Self Healing Infrastructure Mcp",
+  "description": "AI-powered self healing infrastructure MCP server for agents. Supports node health check, cluster health check, restart service. By MEOK AI Labs.",
+  "version": "1.0.6",
+  "homepage": "https://meok.ai",
+  "license": "MIT",
+  "transport": {
+    "type": "stdio"
+  },
+  "tools": [
+    {
+      "name": "node_health_check"
+    },
+    {
+      "name": "cluster_health_check"
+    },
+    {
+      "name": "restart_service"
+    },
+    {
+      "name": "cost_report"
+    },
+    {
+      "name": "auto_remediate"
+    },
+    {
+      "name": "gpu_orchestration"
+    },
+    {
+      "name": "failover_decision"
+    }
+  ]
+}
